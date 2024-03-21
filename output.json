@@ -9,140 +9,27 @@
             },
             "Request":{
                 "id": "1.1",
-                "name": "ECU Reset"
-            },
+                "name": "ECU Reset",
                 "Response":{
                     "condition":{
                         "Negative Response":"True"  
                     }
-
-                }    
+                }
+            }    
         }
     },
     "Request 2": {
         "id": "2.0",
-        "name": "Read data By Identifier",
-        "params":{
-            "Vehicle Identification Number(VIN)":"______",
-             "Board Part Number":"___"
-        },
-        "Response":{
-            "condition":{
-                "Positive Response":"True",
-                "Data Record":"_______"
-            },
-            "Request": {
-                   "id": "2.1",
-                    "name": "Input Output Control By Identifier",
-                    "params": {
-                        "short Term Adjustement":"____________",    
-                        "Control Option Record":"___________" 
-                    },
-                    "Response":{
-                        "condition":{
-                            "Positive Response":"True", 
-                            "Short Term Adjustement":"_________",
-                            "Control Status Record":"____________"
-                        },
-                        "Request": {
-                             "id": "2.2",
-                             "name": "Read Data By Identifier",
-                             "params": {
-                                 "Return Control to ECU":"_____________"    
-                                },
-                             "Response":{
-                                    "condition":{
-                                        "Positive Response":"True",
-                                        "Return Control to ECU":"------",
-                                        "Control Status Record":"--------" 
-                                    },
-                                "Request":{
-                                    "id": "2.3",
-                                    "name": "Read Data By Identifier",
-                                    "params": {
-                                            "Freeze Current State":"----"
-                                    },
-                                        "Response":{
-                                            "condition":{
-                                                "Positive Response":"True",
-                                                "Freeze Current State":"----------",
-                                                "Control Status Record":"-----" 
-                                            }
-                                        }
-                                }
-                 
-                            }
-                        }
-                    }
-            }
-        }
-    },
-    "Request 3": {
-        "id": "3.0",
         "name": "Request Download",
-        "params": {
-            "Download Request Service Id":"____",
-            "Data Format Identifier":"_____",
-            "Address and Length Format Id":"___",
-            "Memory Address":"_",
-            "Memory Size":"-----"
+        "params":{
+            "Download Request Service Id": "1111",
+            "Memory Size":12
+            
         },
         "Response":{
             "condition":{
-                "Positive Response":"True",
-                "response SID":"----",
-                "Length Format Id":"___",
-                "PCI Length":"---"
-                    
-            },
-            "Request ":{
-                "id": "3.1",
-                "name": "Request Download",
-                "params": {
-                    "Download Request Service Id":"____",
-                    "Data Format Identifier":"_____",
-                    "Address and Length Format Id":"___",
-                    "Memory Address":"_",
-                    "Memory Size":"-----"
-                },
-                "Response":{
-                    "condition":{
-                        "Negative Response":"True",
-                        "Response SID":"_",
-                        "Request SID":"----",
-                        "PCI Length":"________"   
-                    }
-                }
+                "Positive Response":"True"
             }
         }
-    },
-    "Request 4":{
-        "id": "4.0",
-        "name": "Request Upload",
-        "params": {
-            "Upload Request Service Id":"_",
-            "Data Format Identifier":"__",
-            "Address and Length Format Id":"_",
-            "Memory Address":"----",
-            "Memory Size":"----"
-        }
-    },
-
-    "Request 5": {
-        "id": "5.0",
-        "name": "Transfer data",
-        "params": {
-            "TransferData request SID":"____",
-            "blockSequenceCounter":"____"
-      
-        }
-    },
-    "Request 6": {
-        "id": "6.0",
-        "name": "Communication Control",
-        "params": {
-            "CC Request Service Id":"____"
-   
-        } 
     }
 }

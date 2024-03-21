@@ -21,7 +21,6 @@ all: $(EXEC)
 $(EXEC): $(OBJS)
 	$(CXX) $(CXXFLAGS) -o $@ $(OBJS) $(LIBS)
 
-// add
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -o $@ -c $<
 

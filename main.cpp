@@ -16,9 +16,10 @@ int main() {
 
 //Utilisation des méthodes des différentes classe
     parser.readJsonFile("output.json");
-    parser.setRawData("Données brutes à analyser");
-    parser.parserJsonData();
-    parser.extractInformation();
+    parser.displayRequest(parser.getJsonData());
+    //parser.setRawData("Données brutes à analyser");
+    //parser.parserJsonData();
+    //parser.extractInformation();
 
     jsonSequencer.addCommand("Commande 1");
     jsonSequencer.addCommand("Commande 2");
